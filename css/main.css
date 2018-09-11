@@ -399,6 +399,7 @@ p {
 
 #go-top {
 	position: fixed;
+	color: #fff;
 	right: 20px;
 	bottom: 35px;
 	width: 40px;
