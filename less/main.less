@@ -1,6 +1,8 @@
 @import "about.less";
 @import "basic.less";
 @import "service.less";
+@import "contact.less";
+
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -51,6 +53,7 @@ p {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 14px;
+	border: none;
 	&.black {
 		background: #222;
 		color: white;
@@ -94,7 +97,7 @@ p {
 	}
 }
 
-.col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-12 {
+.col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-12 {
 	float: left;
 	padding: 0 30px;
 }
@@ -121,6 +124,10 @@ p {
 
 .col-7 {
 	width: 58.33333333333%;
+}
+
+.col-8 {
+	width: 66.6666667%;
 }
 
 .col-12 {
@@ -164,8 +171,6 @@ p {
 .title-block {
 	margin-bottom: 30px;
 }
-
-/* content */
 
 .progress-bar {
 	margin-bottom: 50px;
@@ -292,6 +297,42 @@ p {
 	}
 }
 
+.contact-info {
+	color: @gray;
+	line-height: 30px;
+	a {
+		color: @gray;
+		text-decoration: none;
+	}
+}
+
+.contact-form {
+	display: block;
+	margin-top: 50px;
+	.col-6, .col-12 {
+		padding: 0 15px;
+		margin-bottom: 15px;
+	}
+	label {
+		display: inline-block;
+		margin-bottom: 5px;
+		color: @gray;
+		text-transform: uppercase;
+	}
+	input, textarea{
+		width: 100%;
+		padding: 6px 12px;
+		border: 1px solid #e5e5e5;
+	}
+	textarea {
+		line-height: 95px;
+	}
+	button {
+		margin-top: 0;
+	}
+}
+
+/* content */
 #content {
 	& > div {
 		padding-top: 100px;
@@ -603,14 +644,6 @@ p {
 		text-transform: uppercase;
 		font-weight: normal;
 	}
-	.info {
-		color: @gray;
-		line-height: 30px;
-		a {
-			color: @gray;
-			text-decoration: none;
-		}
-	}
 	.map {
 		a {
 			color: @branding-color;
@@ -712,12 +745,22 @@ p {
 		background-color: #1b1b1b;
 		padding: 35px 0;
 		color: @dark-bottom;
+		&.contact-bottom {
+			background-color: @color_2
+		}
 		.copyright { 
 			margin-top: 10px;
 			text-transform: capitalize;	
 			a {
 			color: white;
 			text-decoration: none;				
+			}
+			&.contact-copyright {
+				width: 100%;
+				text-align: center;
+				font-size: 12px;
+				text-transform: uppercase;
+				letter-spacing: normal;
 			}
 		}
 	}
@@ -729,6 +772,7 @@ p {
 			border-color: @dark-bottom;
 			color: @dark-bottom;
 		}
+		
 	}
 }
 
